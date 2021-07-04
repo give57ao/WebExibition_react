@@ -1,6 +1,6 @@
 ## WebExibition node.js & react
 본 프로젝트는 node.js와 react를 활용하여 만들어진
-웹 전시회 프로젝트 입니다.
+웹 전시회 프로젝트 입니다!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,7 +9,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
