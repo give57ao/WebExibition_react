@@ -1,18 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Detail from './components/Detail';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello React Project^^
-        </p>
-        
-      </header>
-    </div>
-  );
+const detail = {
+  'id' :1,
+  'image': 'https://placeimg.com/64/64/any',
+  'name' : '웹전시회_작성자',
+  'title': '웹전시회_제목',
+  'content': '웹전시회_내용',
+  'date': '웹전시회_날짜'
 }
+
+  class App extends Component{
+    render(){
+    return(
+      <Detail
+      id = {detail.id}
+      image = {detail.image}
+      name = {detail.name}
+      title = {detail.title}
+      content = {detail.content}
+      date = {detail.date}
+      
+      />
+    );
+  }
+  }
+
 
 export default App;
