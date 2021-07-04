@@ -11,7 +11,7 @@ class Detail extends React.Component {
         )
     }
 }
-//관리페이지 (list)를 위해 컴포넌트 구조화
+//관리페이지 (list)를 위해 컴포넌트 구조화!
 class Detail_list extends React.Component{
     render(){
         return(
