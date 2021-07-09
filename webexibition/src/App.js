@@ -1,9 +1,13 @@
 import './App.css';
 import Detail from './components/Detail';
 import React, { Component } from 'react';
-
-const details = 
-[{
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+const details = [
+  {
   'id' :1,
   'image': 'https://placeimg.com/64/64/1',
   'name'  : '강윤묵 / 화정신문',
@@ -37,7 +41,7 @@ const details =
           details.map(d => {
             return(
               <Detail
-              key = {d.id} //map 메소드 는 key 값이 필요함
+              key = {d.id} //map 함수는 key 값이 필요함
               id = {d.id}
               image = {d.image}
               name = {d.name}

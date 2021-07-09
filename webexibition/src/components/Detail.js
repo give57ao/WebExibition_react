@@ -1,14 +1,20 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 class Detail extends React.Component {
 
-    render(){
+    render(){ 
         return(
         //jsx 문법으로 div tag가 있어야 함
-        <div> 
-        <p><Detail_list id={this.props.id} image={this.props.image} title={this.props.title} name={this.props.name} date={this.props.date}/></p>
-        <p>{this.props.content}</p>
-        </div>
+        
+        <TableRow>
+            <TableCell>{this.props.id}</TableCell>
+            <TableCell><img scr={this.props.images}/></TableCell>
+            <TableCell>{this.props.name}</TableCell>
+            <TableCell>{this.props.date}</TableCell>
+            <TableCell>{this.props.content}</TableCell>
+        </TableRow>
         )
     }
 }
