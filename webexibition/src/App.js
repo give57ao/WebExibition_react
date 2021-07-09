@@ -33,32 +33,21 @@ const details =
     render(){
     return(
       <div>
-      <Detail
-      id = {details[0].id}
-      image = {details[0].image}
-      name = {details[0].name}
-      title = {details[0].title}
-      content = {details[0].content}
-      date = {details[0].date}
-      />
-
-      <Detail
-      id = {details[1].id}
-      image = {details[1].image}
-      name = {details[1].name}
-      title = {details[1].title}
-      content = {details[1].content}
-      date = {details[1].date}
-      />
-
-      <Detail
-      id = {details[2].id}
-      image = {details[2].image}
-      name = {details[2].name}
-      title = {details[2].title}
-      content = {details[2].content}
-      date = {details[2].date}
-      />
+        {
+          details.map(d => {
+            return(
+              <Detail
+              key = {d.id} //map 메소드 는 key 값이 필요함
+              id = {d.id}
+              image = {d.image}
+              name = {d.name}
+              title = {d.title}
+              content = {d.content}
+              date = {d.date}
+              />
+            )
+          })
+        }
       </div>
     );
   }
