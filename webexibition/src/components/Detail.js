@@ -4,7 +4,8 @@ class Detail extends React.Component {
 
     render(){
         return(
-        <div>
+        //jsx 문법으로 div tag가 있어야 함
+        <div> 
         <p><Detail_list id={this.props.id} image={this.props.image} title={this.props.title} name={this.props.name} date={this.props.date}/></p>
         <p>{this.props.content}</p>
         </div>
