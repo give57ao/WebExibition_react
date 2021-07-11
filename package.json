@@ -1,5 +1,16 @@
 {
-  "dependencies": {
-    "@material-ui/core": "^4.12.1"
-  }
+    "name": "webexibiton",
+    "version": "1.0.0",
+    "scripts": {
+        "client": "cd client && yarn sta rt",
+        "server": "nodemon serve r.js",
+        "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express":"4.16.4"
+    },
+    "devDepenb dencies": {
+        "concurrently": "4.0.1"
+    }
 }
