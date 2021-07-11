@@ -1,11 +1,29 @@
-import './App.css';
-import Detail from './components/Detail';
 import React, { Component } from 'react';
+import Detail from './components/Detail';
+import './App.css';
+import { Paper } from '@material-ui/core';
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
+import { withStyles } from '@material-ui/core/styles';
+import { mergeClasses } from '@material-ui/styles';
+
+const styles = theme => (
+  {
+    root: {
+      width: '100%',
+      marginTop : theme.spacing.unit * 3,
+      overflowX: "auto"
+    },
+    table:{
+      minWidth : 1080
+    }
+  }
+)
+
+
 const details = [
   {
   'id' :1,
@@ -35,12 +53,23 @@ const details = [
 
   class App extends Component{
     render(){
+      const {classes} = this.props; 
     return(
       <div>
         {
           details.map(d => {
             return(
-              <Detail
+              <Paper className={classes.root}>
+              <Table className={classes.table}>
+                <TableHead>
+                  <TableCell>번호</TableCell>
+                  <TableCell>이미지</TableCell>
+                  <TableCell>작성자</TableCell>
+                  <TableCell>제목</TableCell>
+                  <TableCell>날짜</TableCell>
+                </TableHead>
+                <TableBody>
+                <Detail
               key = {d.id} //map 함수는 key 값이 필요함
               id = {d.id}
               image = {d.image}
@@ -49,13 +78,16 @@ const details = [
               content = {d.content}
               date = {d.date}
               />
+                </TableBody>
+              </Table>
+              </Paper>
             )
           })
         }
       </div>
     );
-  }
+  } 
   }
 
 
-export default App;
+export default withStyles(styles)(App);
