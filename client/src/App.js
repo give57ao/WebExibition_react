@@ -41,7 +41,6 @@ class App extends Component{
       const {classes} = this.props; 
     return(
       <Paper className={classes.root}>
-   
        <Table className={classes.table}>
         <TableHead>
           <TableRow>
@@ -52,18 +51,12 @@ class App extends Component{
               <TableCell>날짜</TableCell>
           </TableRow>
         </TableHead>
-      
       <TableBody>
       {this.state.details ? this.state.details.map(d => { return ( <Detail key = {d.id} id = {d.id} image = {d.image} name = {d.name} title = {d.title} date = {d.date}/>)}) : ""} 
       </TableBody>
       </Table>
-              
-          
       </Paper>  
-     
     );
   } 
   }
-
-
 export default withStyles(styles)(App);
