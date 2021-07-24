@@ -8,7 +8,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import { withStyles } from '@material-ui/core/styles';
-import { mergeClasses } from '@material-ui/styles';
+
 
 const styles = theme => (
   {
@@ -33,7 +33,7 @@ class App extends Component{
   }
   callApi = async () => {
     const response = await fetch('/api/details'); //http://localhost:5000/api/details
-    const body = await response.json();
+    const body = await response.json(); 
     return body;
   } 
  
@@ -43,7 +43,7 @@ class App extends Component{
       <Paper className={classes.root}>
        <Table className={classes.table}>
         <TableHead>
-          <TableRow>
+          <Ta bleRow>
               <TableCell>번호</TableCell>
               <TableCell>이미지</TableCell>
               <TableCell>작성자</TableCell>
